@@ -11,8 +11,9 @@ public class BasicCounter implements Counter {
   
 
  public void increment() throws Exception{
+  int countPreAdd = this.count;
   this.count +=1;
-  if( this.count < this.start){
+  if( this.count < countPreAdd){
     throw new Exception ("Count grew too large");
   }
  }
